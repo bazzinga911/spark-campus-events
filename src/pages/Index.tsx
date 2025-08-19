@@ -1,6 +1,10 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Offerings from "@/components/Offerings";
+import WhatAreWe from "@/components/WhatAreWe";
+import SocialProof from "@/components/SocialProof";
+import RealPeopleVibes from "@/components/RealPeopleVibes";
+import ImageGallery from "@/components/ImageGallery";
+import ContactPreview from "@/components/ContactPreview";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -9,7 +13,11 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <Offerings />
+        <WhatAreWe />
+        <SocialProof />
+        <RealPeopleVibes />
+        <ImageGallery />
+        <ContactPreview />
       </main>
       <Footer />
     </div>

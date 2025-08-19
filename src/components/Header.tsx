@@ -1,13 +1,36 @@
 import { Button } from "@/components/ui/button";
+import { useState, useEffect } from "react";
 
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="relative z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-sm">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'bg-background/95 backdrop-blur-md shadow-card' : 'bg-transparent'
+    }`}>
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <div className="h-8 w-8 rounded-lg gradient-primary"></div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          <div className="flex items-center space-x-3">
+            <img 
+              src="/connection_catalyst_logo_primary.png" 
+              alt="Connection Catalyst" 
+              className="h-10 w-auto"
+              onError={(e) => {
+                // Fallback to gradient square if logo fails to load
+                (e.currentTarget as HTMLImageElement).style.display = 'none';
+                (e.currentTarget.nextElementSibling as HTMLElement).style.display = 'block';
+              }}
+            />
+            <div className="h-10 w-10 rounded-lg gradient-primary hidden"></div>
+            <span className="text-xl font-bold text-foreground">
               Connection Catalyst
             </span>
           </div>
