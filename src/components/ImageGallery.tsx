@@ -11,7 +11,7 @@ const ImageGallery = () => {
       placeholder: "Table Group Smiles"
     },
     {
-      src: "/balcony_group_night.jpg",
+      src: "/balcony_group_night.JPG",
       alt: "Students enjoying the night on a balcony",
       placeholder: "Balcony Night Vibes"
     },
