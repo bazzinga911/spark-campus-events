@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="flex items-center space-x-2">
               <div className="h-8 w-8 rounded-lg gradient-primary"></div>
               <span className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                Spark Campus
+                Connection Catalyst
               </span>
             </div>
             <p className="text-muted-foreground">
@@ -69,7 +69,7 @@ const Footer = () => {
                 <span className="text-muted-foreground">San Francisco, CA</span>
               </div>
             </div>
-            <Button variant="cta" className="mt-4 w-full">
+            <Button variant="primary" className="mt-4 w-full">
               Schedule a Demo
             </Button>
           </div>
@@ -77,7 +77,7 @@ const Footer = () => {
         
         <div className="border-t border-border/50 mt-12 pt-8 text-center">
           <p className="text-muted-foreground">
-            © 2024 Spark Campus Events. All rights reserved.
+            © 2024 Connection Catalyst Events. All rights reserved.
           </p>
         </div>
       </div>

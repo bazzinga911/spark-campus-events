@@ -18,29 +18,29 @@ const Hero = () => {
             </div>
             
             <div className="space-y-4">
-              <h1 className="text-5xl lg:text-7xl font-bold">
-                <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-                  Connect.
+            <h1 className="text-6xl lg:text-8xl font-black leading-tight">
+                <span className="text-foreground">Bringing</span>
+                <br />
+                <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                  Students
                 </span>
                 <br />
-                <span className="text-foreground">Celebrate.</span>
-                <br />
-                <span className="text-foreground">Create.</span>
+                <span className="text-foreground">Together</span>
               </h1>
               
-              <p className="text-xl text-muted-foreground max-w-lg">
-                Empowering students to discover, create, and attend amazing events. 
-                From campus-wide celebrations to intimate dating experiences.
+              <p className="text-xl text-muted-foreground max-w-lg leading-relaxed">
+                The premier platform connecting students through unforgettable events. 
+                From campus celebrations to meaningful connections.
               </p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="hero" size="lg" className="text-lg px-8 py-6">
-                Explore Our Platform
+                Explore
                 <ArrowRight className="h-5 w-5" />
               </Button>
               <Button variant="cta-outline" size="lg" className="text-lg px-8 py-6">
-                Get a Quote
+                Learn More
               </Button>
             </div>
             
@@ -60,15 +60,19 @@ const Hero = () => {
             </div>
           </div>
           
-          {/* Right content - Hero image */}
+          {/* Right content - Placeholder for event images */}
           <div className="relative animate-float">
             <div className="relative">
-              <img 
-                src={heroImage} 
-                alt="Students at vibrant campus events" 
-                className="w-full h-auto rounded-3xl shadow-card"
-              />
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-primary/20 via-transparent to-transparent"></div>
+              <div className="w-full aspect-[4/3] bg-gradient-to-br from-accent/20 to-primary/10 rounded-3xl shadow-card flex items-center justify-center border-2 border-dashed border-primary/30">
+                <div className="text-center space-y-2">
+                  <div className="w-16 h-16 mx-auto bg-primary/20 rounded-full flex items-center justify-center">
+                    <Sparkles className="h-8 w-8 text-primary" />
+                  </div>
+                  <p className="text-primary font-medium">Your Event Images Here</p>
+                  <p className="text-sm text-muted-foreground">Upload amazing student event photos</p>
+                </div>
+              </div>
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-primary/10 via-transparent to-transparent"></div>
             </div>
             
             {/* Floating elements */}
