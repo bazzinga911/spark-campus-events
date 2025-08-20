@@ -3,7 +3,6 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
@@ -18,5 +17,6 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "/spark-campus-events/",   // 👈 Add this line
+  // ✅ Use "/" in dev/Lovable, repo path only in production (GitHub Pages)
+  base: mode === "production" ? "/spark-campus-events/" : "/",
 }));
